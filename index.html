@@ -143,9 +143,9 @@
 
     // ======= DYNAMIC CONTENT =======
     // Edit the arrays below to populate Projects, Experience, Skills, and Education.
-    const headline = "Analytics, Machine Learning & Software Development";
-    // const headline = 'Turning messy data into <span class="bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 bg-clip-text text-transparent">useful products</span>.';
-    document.getElementById("headline").textContent = headline;    
+    // const headline = "Analytics, Machine Learning & Software Development";
+    const headline = 'Turning messy data into <span class="bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 bg-clip-text text-transparent">useful products</span>.';
+    document.getElementById("headline").innerHTML = headline;    
     const subtext = "Recent Data Science graduate from SJSU with hands-on experience in Python, machine learning, SQL databases, and interactive dashboard development. Built end-to-end data apps, including survival-analysis dashboards for 1.5M+ business records and CNN-based image classifiers. U.S. Army veteran with proven discipline and mission-driven execution."
     document.getElementById("subtext").textContent = subtext;
     // Add status text
@@ -312,8 +312,8 @@
       const cwLine = ed.coursework && ed.coursework.length ? `Relevant Coursework: ${ed.coursewrok.join(', ')}` : '';
       p.className = 'mb-4';
       p.innerHTML = `
-        <strong>${ed.degree}</strong>${majors ? ` in ${majors}` : ''}<br>
-        ${ed.school}${ed.location ? `, ${ed.location}` : ''}<br>
+        <span style='font-weight: 700; font-size: 20px;'>${ed.school}</span>${ed.location ? `, ${ed.location}` : ''}<br>
+        <span style='font-weight: 550'>${ed.degree}</span>${majors ? ` in ${majors}` : ''}<br>
         ${dateRange}<br>
         ${gpaLine}${gpaLine && cwLine ? '<br>' : ''}${cwLine}
         `;
