@@ -78,20 +78,20 @@
   <!-- Experience -->
   <section id="experience" class="max-w-6xl mx-auto px-4 py-12 border-t border-slate-200 dark:border-slate-800">
     <h2 class="text-2xl font-bold mb-6">Experience</h2>
-    <ol class="relative border-s-l border-slate-200 dark:border-slate-800" id="experienceList">
+    <ol class="ml-4 relative border-s-l border-slate-200 dark:border-slate-800" id="experienceList">
     </ol>
   </section>
 
   <!-- Projects -->
   <section id="projects" class="max-w-6xl mx-auto px-4 py-12">
     <h2 class="text-2xl font-bold mb-6">Projects</h2>
-    <div id="projectsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <div id="projectsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ml-4"></div>
   </section>
 
   <!-- Skills -->
   <section id="skills" class="max-w-6xl mx-auto px-4 py-12 border-t border-slate-200 dark:border-slate-800">
     <h2 class="text-2xl font-bold mb-6">Skills</h2>
-    <ul class="flex flex-wrap gap-2 text-sm" id="skillsList">
+    <ul class="flex flex-wrap gap-2 text-sm ml-4" id="skillsList">
       <!-- Example:
       <li class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Python</li>
       -->
@@ -100,8 +100,8 @@
 
   <!-- Education -->
   <section id="education" class="max-w-6xl mx-auto px-4 py-12 border-t border-slate-200 dark:border-slate-800">
-    <h2 class="text-2xl font-bold mb-6">Education</h2>
-    <div id="educationList">
+    <h2 class="text-2xl font-bold mb-6">🎓 Education</h2>
+    <div id="educationList" class="ml-4">
       <!-- Example:
       <p><strong>{{DEGREE}}</strong> — {{SCHOOL}} · {{EDU_NOTES}}</p>
       -->
@@ -124,6 +124,10 @@
 
   <footer class="py-8 text-center text-xs text-slate-500 border-t border-slate-200 dark:border-slate-800">© <span
       id="year"></span> Eric Zhao — Built with GitHub Pages</footer>
+
+
+
+
 
   <!-- =====script content===== -->
   <script>
@@ -279,45 +283,61 @@
     // Education
     const education = [
       // Example:
-      // { degree: 'Bachelor of Science', major: 'Data Science',
+      // {
       //   school: 'name of University', location: 'city, state',
+      //   degrees: [
+      //     {degree: 'Bachelor of Science', major: 'your major'}
+      //   ],
       //   start_time: 'month year', end_time: 'month year',
       //   gpa: 0.0 - 4.0
       // },
       {
-        degree: 'Bachelor of Science', major: 'Data Science',
         school: 'San Jose State University', location: 'San Jose, CA',
+        degrees: [
+          {degree: 'Bachelor of Science', major: 'Data Science'}
+        ],
         start_time: 'Aug 2023', end_time: 'May 2025',
         gpa: 3.9
       },
       {
-        degree: 'Associate of Science', major: ['Computer Science', 'Physics'],
         school: 'College of the Sequoias', location: 'Visalia, CA',
-        start_time: 'Aug 2021', end_time: 'May 2023',
-        gpa: 4.0
-      },
-      {
-        degree: 'Associate of Arts', major: ['Math and Science'],
-        school: 'College of the Sequoias', location: 'Visalia, CA',
+        degrees: [
+          {degree: 'Associate of Science', major: ['Computer Science', 'Physics']},
+          {degree: 'Associate of Arts', major: ['Math and Science']}
+        ],
         start_time: 'Aug 2021', end_time: 'May 2023',
         gpa: 4.0
       }
     ];
     const eduList = document.getElementById('educationList');
     education.forEach(ed => {
-      const p = document.createElement('p');
-      const majors = Array.isArray(ed.major) ? ed.major.join(', ') : (ed.major || '');
-      const dateRange = [ed.start_time, ed.end_time].filter(Boolean).join(' - ');
-      const gpaLine = ed.gpa ? `GPA: ${ed.gpa}` : '';
-      const cwLine = ed.coursework && ed.coursework.length ? `Relevant Coursework: ${ed.coursewrok.join(', ')}` : '';
-      p.className = 'mb-4';
-      p.innerHTML = `
-        <span style='font-weight: 700; font-size: 20px;'>${ed.school}</span>${ed.location ? `, ${ed.location}` : ''}<br>
-        <span style='font-weight: 550'>${ed.degree}</span>${majors ? ` in ${majors}` : ''}<br>
-        ${dateRange}<br>
-        ${gpaLine}${gpaLine && cwLine ? '<br>' : ''}${cwLine}
+      const block = document.createElement('div');
+      block.className = 'mb-6';
+
+      // School Name
+      block.innerHTML = `
+        <span style='font-weight: 700; font-size:20px;'>${ed.school}</span>${ed.location ? `, ${ed.location}`: ''}<br>
+      `;
+      // Degrees
+      ed.degrees.forEach(d => {
+        const majors = Array.isArray(d.major) ? d.major.join(', ') : d.major;
+        const degreeLine = document.createElement('div');
+        degreeLine.className = 'ml-2';
+        degreeLine.innerHTML = `
+          <span style="font-weight:550">${d.degree}</span>${majors ? ` in ${majors}`: ''}<br>
         `;
-      eduList.appendChild(p);
+        block.appendChild(degreeLine);
+      });
+      // Date + GPA
+      const rangeAndGPA = document.createElement('div');
+      rangeAndGPA.className = 'ml-2 mt-2';
+      rangeAndGPA.innerHTML = `
+        ${ed.start_time} - ${ed.end_time}<br>
+        GPA: ${Number(ed.gpa).toFixed(1)}
+      `;
+      block.appendChild(rangeAndGPA);
+
+      eduList.appendChild(block);
     });
   </script>
 </body>
