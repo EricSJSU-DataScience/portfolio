@@ -67,9 +67,15 @@
       <div class="md:col-span-5">
         <!-- Piture section  -->
         <div class="relative w-40 h-40 md:w-56 md:h-56">
-          <img id="heroPhoto"
+          <!-- <img id="heroPhoto"
             class="w-full h-full rounded-full object-cover border border-slate-200 dark:border-slate-800 transition-opacity duration-700 opacity-0"
-            alt="photo">
+            alt="photo"> -->
+          <img id="photoA"
+            class="absolute inset-0 w-full h-full rounded-full object-cover border border-slate-200 dark:border-slate-800 transition-opacity duration-700 opacity-100"
+            alt="Photo A">
+          <img id="photoB"
+            class="absolute inset-0 w-full h-full rounded-full object-cover border border-slate-200 dark:border-slate-800 transition-opacity duration-700 opacity-0"
+            alt="Photo B">
         </div>
       </div>
     </div>
@@ -161,6 +167,7 @@
       "machine learning, SQL databases, and interactive dashboard development. ",
       "Built end-to-end data apps, including survival-analysis dashboards for 1.5M+ business records and CNN-based image classifiers. U.S. Army veteran with proven discipline and mission-driven execution."]
     document.getElementById("subtext").textContent = subtexts.join('');
+
     // ------- status badge -------
     // Add status text
     const currentStatus = [
@@ -179,6 +186,7 @@
       pill.textContent = item.text;
       badgesWrap.appendChild(pill);
     });
+
     // ------- Picture -------
     const photos = [
       "assets/img/2016_army_mission.jpg",
@@ -192,7 +200,7 @@
     ];
 
     // (Optional) alt text per image for accessibility:
-    const photoAlts = [
+    const alts = [
       "US Army mission @ check point",
       "Army National Training Center",
       "Soldier of the month, Mustang Soldier",
@@ -203,38 +211,54 @@
       "SJSU Commencement",
     ];
 
-    const imgEl = document.getElementById("heroPhoto");
-    let idx = 0;
+    // Timing (ms)
+    const SWAP_TIME = 5000;   // change this to adjust interval
 
-    // smoother crossfade
-    function show(i) {
-      // fade OUT
-      imgEl.classList.add("opacity-0");
-
-      setTimeout(() => {
-        const src = photos[i];
-        const alt = photoAlts[i] || "Portfolio photo";
-
-        imgEl.src = src;
-        imgEl.alt = alt;
-
-        // fade IN
-        imgEl.classList.remove("opacity-0");
-      }, 700); // same as duration-700
-    }
-
-    // Preload images for smooth fades
+    // Preload
     photos.forEach(src => { const i = new Image(); i.src = src; });
 
-    show(idx);
+    const imgA = document.getElementById("photoA");
+    const imgB = document.getElementById("photoB");
 
-    // Change image every X milliseconds
-    const SWAP_TIME = 5000;  // <── change this to control timing
+    let idx = 0;         // current photo index shown on the top image
+    let showA = true;    // which image is currently on top (visible)
 
-    setInterval(() => {
-      idx = (idx + 1) % photos.length;
-      show(idx);
-    }, SWAP_TIME);
+    // Initialize: A shows first, B preloads next
+    function setImg(el, i) {
+      el.src = photos[i];
+      el.alt = alts[i] || "Portfolio photo";
+    }
+    setImg(imgA, idx);
+    setImg(imgB, (idx + 1) % photos.length);
+
+    // Crossfade function
+    function crossfade() {
+      const nextIdx = (idx + 1) % photos.length;
+
+      // The image that will fade in (currently hidden)
+      const incoming = showA ? imgB : imgA;
+      // The image that will fade out (currently visible)
+      const outgoing = showA ? imgA : imgB;
+
+      // Prepare incoming with the *next* image
+      setImg(incoming, nextIdx);
+
+      // Crossfade: incoming -> visible, outgoing -> hidden
+      incoming.classList.remove("opacity-0");
+      outgoing.classList.add("opacity-0");
+
+      // Flip state
+      showA = !showA;
+      idx = nextIdx;
+
+      // Preload the next-next image into the now-hidden element
+      const preloadNext = (idx + 1) % photos.length;
+      const hidden = showA ? imgB : imgA; // the one now hidden
+      // (optional) you can preload here if needed; we already preload above
+    }
+
+    // Start loop
+    setInterval(crossfade, SWAP_TIME);
 
 
     // ------- Projects -------
