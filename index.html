@@ -65,11 +65,11 @@
         </div>
       </div>
       <div class="md:col-span-5">
-        <div class="relative">
-          <div class="aspect-[4/3] rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
-            <!-- Replace with your own image URL or remove the img tag -->
-            <img src="{{HERO_IMAGE_URL}}" alt="{{HERO_IMAGE_ALT}}" class="w-full h-full object-cover" />
-          </div>
+        <!-- Piture section  -->
+        <div class="relative w-40 h-40 md:w-56 md:h-56">
+          <img id="heroPhoto"
+            class="w-full h-full rounded-full object-cover border border-slate-200 dark:border-slate-800 transition-opacity duration-700 opacity-0"
+            alt="photo">
         </div>
       </div>
     </div>
@@ -77,20 +77,20 @@
 
   <!-- Experience -->
   <section id="experience" class="max-w-6xl mx-auto px-4 py-12 border-t border-slate-200 dark:border-slate-800">
-    <h2 class="text-2xl font-bold mb-6">Experience</h2>
+    <h2 class="text-2xl font-bold mb-6">💼 Experience</h2>
     <ol class="ml-4 relative border-s-l border-slate-200 dark:border-slate-800" id="experienceList">
     </ol>
   </section>
 
   <!-- Projects -->
   <section id="projects" class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-2xl font-bold mb-6">Projects</h2>
+    <h2 class="text-2xl font-bold mb-6">📁 Projects</h2>
     <div id="projectsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ml-4"></div>
   </section>
 
   <!-- Skills -->
   <section id="skills" class="max-w-6xl mx-auto px-4 py-12 border-t border-slate-200 dark:border-slate-800">
-    <h2 class="text-2xl font-bold mb-6">Skills</h2>
+    <h2 class="text-2xl font-bold mb-6">💡 Skills</h2>
     <ul class="flex flex-wrap gap-2 text-sm ml-4" id="skillsList">
       <!-- Example:
       <li class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800">Python</li>
@@ -111,7 +111,7 @@
 
   <!-- Contact -->
   <section id="contact" class="max-w-6xl mx-auto px-4 py-12 border-t border-slate-200 dark:border-slate-800">
-    <h2 class="text-2xl font-bold mb-6">Contact</h2>
+    <h2 class="text-2xl font-bold mb-6">☎️ Contact</h2>
     <div class="flex flex-wrap gap-3 text-sm">
       <a class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700"
         href="vet.ericzhao@gmail.com">Email</a>
@@ -147,11 +147,21 @@
 
     // ======= DYNAMIC CONTENT =======
     // Edit the arrays below to populate Projects, Experience, Skills, and Education.
-    // const headline = "Analytics, Machine Learning & Software Development";
-    const headline = 'Turning messy data into <span class="bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 bg-clip-text text-transparent">useful products</span>.';
-    document.getElementById("headline").innerHTML = headline;    
-    const subtext = "Recent Data Science graduate from SJSU with hands-on experience in Python, machine learning, SQL databases, and interactive dashboard development. Built end-to-end data apps, including survival-analysis dashboards for 1.5M+ business records and CNN-based image classifiers. U.S. Army veteran with proven discipline and mission-driven execution."
-    document.getElementById("subtext").textContent = subtext;
+    // ------- headline text -------
+    const headlineElements = [
+      'Collect ',
+      '<span class="bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent">data</span> ',
+      'and turn into ',
+      '<span class="bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 bg-clip-text text-transparent">useful products</span>',
+      '.'
+    ];
+    document.getElementById("headline").innerHTML = headlineElements.join('');
+    const subtexts = [
+      "Recent Data Science graduate from SJSU with hands-on experience in Python, ",
+      "machine learning, SQL databases, and interactive dashboard development. ",
+      "Built end-to-end data apps, including survival-analysis dashboards for 1.5M+ business records and CNN-based image classifiers. U.S. Army veteran with proven discipline and mission-driven execution."]
+    document.getElementById("subtext").textContent = subtexts.join('');
+    // ------- status badge -------
     // Add status text
     const currentStatus = [
       // Example:
@@ -169,7 +179,65 @@
       pill.textContent = item.text;
       badgesWrap.appendChild(pill);
     });
+    // ------- Picture -------
+    const photos = [
+      "assets/img/2016_army_mission.jpg",
+      "assets/img/2017_NTC.jpg",
+      "assets/img/2018_soldier_of_the_month.jpg",
+      "assets/img/2023_sjsu_1st_semester.jpg",
+      "assets/img/2024_hiking.jpg",
+      "assets/img/2024_summer_trip.jpg",
+      "assets/img/2025_sjsu_vre_graduate_dinner.jpg",
+      "assets/img/2025_sjsu_commencement.jpg",
+    ];
 
+    // (Optional) alt text per image for accessibility:
+    const photoAlts = [
+      "US Army mission @ check point",
+      "Army National Training Center",
+      "Soldier of the month, Mustang Soldier",
+      "Start Academic Journey @ San Jose State University",
+      "Hiking to take a break",
+      "Professional photography in summer trip",
+      "VRE Graduation dinner @ SJSU",
+      "SJSU Commencement",
+    ];
+
+    const imgEl = document.getElementById("heroPhoto");
+    let idx = 0;
+
+    // smoother crossfade
+    function show(i) {
+      // fade OUT
+      imgEl.classList.add("opacity-0");
+
+      setTimeout(() => {
+        const src = photos[i];
+        const alt = photoAlts[i] || "Portfolio photo";
+
+        imgEl.src = src;
+        imgEl.alt = alt;
+
+        // fade IN
+        imgEl.classList.remove("opacity-0");
+      }, 700); // same as duration-700
+    }
+
+    // Preload images for smooth fades
+    photos.forEach(src => { const i = new Image(); i.src = src; });
+
+    show(idx);
+
+    // Change image every X milliseconds
+    const SWAP_TIME = 5000;  // <── change this to control timing
+
+    setInterval(() => {
+      idx = (idx + 1) % photos.length;
+      show(idx);
+    }, SWAP_TIME);
+
+
+    // ------- Projects -------
     // Projects
     const projects = [
       // Example:
@@ -194,7 +262,7 @@
       grid.appendChild(el);
     });
 
-    // Experience (optional JS population)
+    // ------- Experience -------
     const experience = [
       // Example:
       // {
@@ -268,7 +336,7 @@
       expList.appendChild(li);
     });
 
-    // Skills
+    // ------- Skills -------
     const skills = [
       // 'Python', 'SQL', 'Pandas', 'TensorFlow'
     ];
@@ -280,7 +348,7 @@
       skillsList.appendChild(li);
     });
 
-    // Education
+    // ------- Education -------
     const education = [
       // Example:
       // {
@@ -294,7 +362,7 @@
       {
         school: 'San Jose State University', location: 'San Jose, CA',
         degrees: [
-          {degree: 'Bachelor of Science', major: 'Data Science'}
+          { degree: 'Bachelor of Science', major: 'Data Science' }
         ],
         start_time: 'Aug 2023', end_time: 'May 2025',
         gpa: 3.9
@@ -302,8 +370,8 @@
       {
         school: 'College of the Sequoias', location: 'Visalia, CA',
         degrees: [
-          {degree: 'Associate of Science', major: ['Computer Science', 'Physics']},
-          {degree: 'Associate of Arts', major: ['Math and Science']}
+          { degree: 'Associate of Science', major: ['Computer Science', 'Physics'] },
+          { degree: 'Associate of Arts', major: ['Math and Science'] }
         ],
         start_time: 'Aug 2021', end_time: 'May 2023',
         gpa: 4.0
@@ -316,7 +384,7 @@
 
       // School Name
       block.innerHTML = `
-        <span style='font-weight: 700; font-size:20px;'>${ed.school}</span>${ed.location ? `, ${ed.location}`: ''}<br>
+        <span style='font-weight: 700; font-size:20px;'>${ed.school}</span>${ed.location ? `, ${ed.location}` : ''}<br>
       `;
       // Degrees
       ed.degrees.forEach(d => {
@@ -324,7 +392,7 @@
         const degreeLine = document.createElement('div');
         degreeLine.className = 'ml-2';
         degreeLine.innerHTML = `
-          <span style="font-weight:550">${d.degree}</span>${majors ? ` in ${majors}`: ''}<br>
+          <span style="font-weight:550">${d.degree}</span>${majors ? ` in ${majors}` : ''}<br>
         `;
         block.appendChild(degreeLine);
       });
