@@ -140,12 +140,15 @@
   <section id="contact" class="max-w-6xl mx-auto px-4 py-12 border-t border-slate-200 dark:border-slate-800">
     <h2 class="text-2xl font-bold mb-6">☎️ Contact</h2>
     <div class="flex flex-wrap gap-3 text-sm">
+      <!-- <a class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700"
+        href="vet.ericzhao@gmail.com">Email</a> -->
+      <a id="copyEmail"
+        class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 cursor-pointer select-none">
+        Email</a>
       <a class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700"
-        href="vet.ericzhao@gmail.com">Email</a>
-      <a class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700" href="{{GITHUB_URL}}"
-        target="_blank" rel="noreferrer">GitHub</a>
-      <a class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700" href="{{LINKEDIN_URL}}"
-        target="_blank" rel="noreferrer">LinkedIn</a>
+        href="https://github.com/EricSJSU-DataScience" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700"
+        href="https://www.linkedin.com/in/eric-zhao-data-scientist/" target="_blank" rel="noreferrer">LinkedIn</a>
     </div>
   </section>
 
@@ -160,7 +163,6 @@
   <script>
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-
 
 
     // ======= DYNAMIC CONTENT =======
@@ -444,13 +446,28 @@
       eduList.appendChild(block);
     });
 
-    
+
     // Dark/Light toggle
     const toggle = document.getElementById('themeToggle');
     toggle.addEventListener('click', () => {
       const root = document.documentElement;
       const isDark = root.classList.toggle('dark');
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    // Contact - copy email address
+    const email = "vet.ericzhao@gmail.com";
+    const emailBtn = document.getElementById("copyEmail");
+
+    emailBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(email)
+        .then(() => {
+          emailBtn.textContent = "Copied!";
+          setTimeout(() => emailBtn.textContent = "Email", 1500);
+        })
+        .catch(() => {
+          alert("Could not copy email");
+        });
     });
   </script>
 </body>
