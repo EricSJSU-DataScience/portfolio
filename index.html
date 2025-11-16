@@ -109,10 +109,15 @@
     </ol>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="max-w-6xl mx-auto px-4 py-12">
-    <h2 class="text-2xl font-bold mb-6">📁 Projects</h2>
-    <div id="projectsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ml-4"></div>
+  <!-- Education -->
+  <section id="education" class="max-w-6xl mx-auto px-4 py-12 border-t border-slate-200 dark:border-slate-800">
+    <h2 class="text-2xl font-bold mb-6">🎓 Education</h2>
+    <div id="educationList" class="ml-4">
+      <!-- Example:
+      <p><strong>{{DEGREE}}</strong> — {{SCHOOL}} · {{EDU_NOTES}}</p>
+      -->
+
+    </div>
   </section>
 
   <!-- Skills -->
@@ -125,15 +130,10 @@
     </ul>
   </section>
 
-  <!-- Education -->
-  <section id="education" class="max-w-6xl mx-auto px-4 py-12 border-t border-slate-200 dark:border-slate-800">
-    <h2 class="text-2xl font-bold mb-6">🎓 Education</h2>
-    <div id="educationList" class="ml-4">
-      <!-- Example:
-      <p><strong>{{DEGREE}}</strong> — {{SCHOOL}} · {{EDU_NOTES}}</p>
-      -->
-
-    </div>
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold mb-6">📁 Projects</h2>
+    <div id="projectsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 ml-4"></div>
   </section>
 
   <!-- Contact -->
@@ -380,7 +380,23 @@
 
     // ------- Skills -------
     const skills = [
-      // 'Python', 'SQL', 'Pandas', 'TensorFlow'
+      // Programming Languages & Tools
+      'C', 'C++', 'Java', 'Python', 'SQL', 'R', 'Google App Engine', 'JMP',
+
+      // Libraries & Frameworks
+      'NumPy', 'Pandas', 'Matplotlib', 'Seaborn', 'TensorFlow', 'Scikit-learn',
+      'Flask', 'Dash', 'Plotly',
+
+      // Data Collection & Quality (Current @ Meta)
+      'Data Collection', 'Data Quality Assurance', 'Command Line', 'Research Operations',
+      'AR/VR Hardware', 'Prototype Testing', 'Device Troubleshooting',
+      'Bug Logging', 'Study Protocol Compliance', 'Metadata Validation',
+      'Confidential Data Handling', 'Equipment Tracking', 'QA Documentation',
+
+      // US Army
+      'Team Leadership', 'Operational Safety & Compliance',
+      'Technical Equipment Troubleshooting', 'High-Stress Problem Solving',
+      'Logistics Coordination',
     ];
     const skillsList = document.getElementById('skillsList');
     skills.forEach(s => {
