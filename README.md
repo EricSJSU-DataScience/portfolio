@@ -1,5 +1,5 @@
 To-Do: 
-- re-orgnize project section and add to portfolio
+- ~~re-orgnize project section and add to portfolio~~
 - ~~add skill section~~
-- add project section (general info should enough for now)
+- ~~add project section (general info should enough for now)~~
 - complete readme.md
