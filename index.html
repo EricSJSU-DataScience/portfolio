@@ -131,7 +131,7 @@
       <!-- Example:
       modify script: const skills
       -->
-      
+
     </ul>
   </section>
 
@@ -283,25 +283,67 @@
     // ------- Projects -------
     // Projects
     const projects = [
-      // Example:
-      // {
-      //   title: 'Project Name',
-      //   desc: 'Short description of what the project does and tech used.',
-      //   tags: ['Tech1', 'Tech2'],
-      //   link: 'https://github.com/your-gh/project'
-      // }
+      {
+        title: 'Business Trends & Market Analysis',
+        type: 'Academic',
+        desc: [
+          'Analyzed 1.5M+ LA business records using Python and survival analysis techniques.',
+          'Built Kaplan–Meier, Random Survival Forest, and LSTM predictive models.',
+          'Developed an interactive Plotly Dash dashboard deployed on Google App Engine.'
+        ],
+        link: 'https://github.com/EricSJSU-DataScience/CS163_project'
+      },
+      {
+        title: 'Auction & Marketplace System',
+        type: 'Academic',
+        desc: [
+          'Designed and normalized a MySQL database schema (ERD, BCNF, indexing, triggers).',
+          'Implemented a full-stack web app with Node.js/Express backend and React frontend.',
+          'Supported product browsing, auctions, cart, order processing, and notifications.'
+        ],
+        link: 'https://github.com/EricSJSU-DataScience/CS157A' 
+      },
+      {
+        title: 'Automated Food Classification',
+        type: 'Academic',
+        desc: [
+          'Developed CNN models using transfer learning (EfficientNetB0, ResNet50).',
+          'Applied data augmentation and training optimizations on Food-101 dataset.',
+          'Achieved 80.7% classification accuracy.'
+        ],
+        link: ''
+      },
+      {
+        title: 'The Apathy of Kings — Card Game',
+        type: 'Academic',
+        desc: [
+          'Developed a turn-based card game in Python.',
+          'Implemented core game logic: turn sequencing, card interactions, and state management.',
+          'Debugged and refined gameplay mechanics.'
+        ],
+        link: 'https://github.com/EricSJSU-DataScience/CS122_The-Apathy-of-Kings'
+      }
     ];
 
     const grid = document.getElementById('projectsGrid');
     projects.forEach(p => {
       const el = document.createElement('article');
       el.className = 'rounded-2xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-md transition';
+      // Build bullet point HTML
+      const bulletHTML = (p.desc || [])
+        .map(d => `<li class="text-sm text-slate-600 dark:text-slate-300">${d}</li>`)
+        .join('');
+      // Add link only if provided
+      const linkHTML = p.link
+        ? `<a class="mt-4 inline-block text-sm underline" href="${p.link}" target="_blank" rel="noreferrer">View project</a>`
+        : '';
       el.innerHTML = `
         <h3 class="font-semibold text-lg">${p.title}</h3>
-        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">${p.desc}</p>
-        <div class="mt-3 flex flex-wrap gap-2">${(p.tags || []).map(t => `<span class='text-xs px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800'>${t}</span>`).join('')}</div>
-        ${p.link ? `<a class="mt-4 inline-block text-sm underline" href="${p.link}" target="_blank" rel="noreferrer">View project</a>` : ''}
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">${p.type}</p>
+        <ul class="mt-2 ml-4 list-disc">${bulletHTML}</ul>
+        ${linkHTML}
       `;
+
       grid.appendChild(el);
     });
 
