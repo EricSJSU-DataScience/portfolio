@@ -157,5 +157,6 @@ LinkedIn: https://www.linkedin.com/in/eric-zhao-data-scientist/
 - ~~add skill section~~
 - ~~add project section (general info should enough for now)~~
 - ~~move contents to `data` folder `.json` files, index.html script will fetch `.json`~~
-- re-work for skill section
 - ~~complete readme.md~~
+- ~~re-work for skill section~~
+- find better way to present skill section
