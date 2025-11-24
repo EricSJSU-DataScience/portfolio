@@ -1,0 +1,19 @@
+[
+    {
+        "school": "San Jose State University", "location": "San Jose, CA",
+        "degrees": [
+            { "degree": "Bachelor of Science", "major": "Data Science"}
+        ],
+        "start_time": "Aug 2023", "end_time": "May 2025",
+        "gpa": 3.9
+    },
+    {
+        "school": "College of the Sequoias", "location": "Visalia, CA",
+        "degrees": [
+            { "degree": "Associate of Science", "major": ["Computer Science", "Physics"]},
+            { "degree": "Associate of Arts", "major": ["Math and Science"]}
+        ],
+        "start_time": "Aug 2021", "end_time": "May 2023",
+        "gpa": 4.0
+    }
+]
