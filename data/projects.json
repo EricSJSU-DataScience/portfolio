@@ -1,0 +1,42 @@
+[
+      {
+        "title": "Business Trends & Market Analysis",
+        "type": "Academic",
+        "desc": [
+          "Analyzed 1.5M+ LA business records using Python and survival analysis techniques.",
+          "Built Kaplan–Meier, Random Survival Forest, and LSTM predictive models.",
+          "Developed an interactive Plotly Dash dashboard deployed on Google App Engine."
+        ],
+        "link": "https://github.com/EricSJSU-DataScience/CS163_project"
+      },
+      {
+        "title": "Auction & Marketplace System",
+        "type": "Academic",
+        "desc": [
+          "Designed and normalized a MySQL database schema (ERD, BCNF, indexing, triggers).",
+          "Implemented a full-stack web app with Node.js/Express backend and React frontend.",
+          "Supported product browsing, auctions, cart, order processing, and notifications."
+        ],
+        "link": "https://github.com/EricSJSU-DataScience/CS157A" 
+      },
+      {
+        "title": "Automated Food Classification",
+        "type": "Academic",
+        "desc": [
+          "Developed CNN models using transfer learning (EfficientNetB0, ResNet50).",
+          "Applied data augmentation and training optimizations on Food-101 dataset.",
+          "Achieved 80.7% classification accuracy."
+        ],
+        "link": ""
+      },
+      {
+        "title": "The Apathy of Kings — Card Game",
+        "type": "Academic",
+        "desc": [
+          "Developed a turn-based card game in Python.",
+          "Implemented core game logic: turn sequencing, card interactions, and state management.",
+          "Debugged and refined gameplay mechanics."
+        ],
+        "link": "https://github.com/EricSJSU-DataScience/CS122_The-Apathy-of-Kings"
+      }
+    ]
