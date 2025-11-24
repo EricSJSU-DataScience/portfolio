@@ -1,0 +1,256 @@
+[
+  {
+    "name": "Data Collection",
+    "type": "Technical Skill",
+    "context": "Industry",
+    "tags": ["Research Ops", "Meta"]
+  },
+  {
+    "name": "Data Quality Assurance",
+    "type": "Technical Skill",
+    "context": "Industry",
+    "tags": ["QA", "Meta"]
+  },
+  {
+    "name": "Command Line",
+    "type": "Tool",
+    "context": "Industry",
+    "tags": ["Shell", "CLI"]
+  },
+  {
+    "name": "Research Operations",
+    "type": "Technical Skill",
+    "context": "Industry",
+    "tags": ["RDL", "Meta"]
+  },
+  {
+    "name": "Prototype Testing",
+    "type": "Technical Skill",
+    "context": "Industry",
+    "tags": ["AR/VR", "Meta"]
+  },
+  {
+    "name": "VR Device Troubleshooting",
+    "type": "Technical Skill",
+    "context": "Industry",
+    "tags": ["Hardware Debugging", "Meta"]
+  },
+  {
+    "name": "Bug Logging",
+    "type": "Technical Skill",
+    "context": "Industry",
+    "tags": ["QA", "Bug Tracking"]
+  },
+  {
+    "name": "Study Protocol Compliance",
+    "type": "Technical Skill",
+    "context": "Industry",
+    "tags": ["RDL", "Meta"]
+  },
+  {
+    "name": "Metadata Validation",
+    "type": "Technical Skill",
+    "context": "Industry",
+    "tags": ["Data Quality", "Meta"]
+  },
+  {
+    "name": "Confidential Data Handling",
+    "type": "Technical Skill",
+    "context": "Industry",
+    "tags": ["Security", "Compliance"]
+  },
+  {
+    "name": "QA Documentation",
+    "type": "Technical Skill",
+    "context": "Industry",
+    "tags": ["Reporting", "Meta"]
+  },
+  {
+    "name": "C",
+    "type": "Language",
+    "context": "Academic",
+    "tags": ["Programming"]
+  },
+  {
+    "name": "C++",
+    "type": "Language",
+    "context": "Academic",
+    "tags": ["Programming"]
+  },
+  {
+    "name": "Java",
+    "type": "Language",
+    "context": "Academic",
+    "tags": ["Programming"]
+  },
+  {
+    "name": "Python",
+    "type": "Language",
+    "context": "Academic",
+    "tags": ["Data Science", "ML"]
+  },
+  {
+    "name": "SQL",
+    "type": "Language",
+    "context": "Academic",
+    "tags": ["Database", "Queries"]
+  },
+  {
+    "name": "R",
+    "type": "Language",
+    "context": "Academic",
+    "tags": ["Statistics"]
+  },
+  {
+    "name": "JMP",
+    "type": "Tool",
+    "context": "Academic",
+    "tags": ["Statistics"]
+  },
+  {
+    "name": "Google App Engine",
+    "type": "Tool",
+    "context": "Academic",
+    "tags": ["Cloud"]
+  },
+
+
+  {
+    "name": "NumPy",
+    "type": "Library",
+    "context": "Academic",
+    "tags": ["Data Science"]
+  },
+  {
+    "name": "Pandas",
+    "type": "Library",
+    "context": "Academic",
+    "tags": ["Data Science"]
+  },
+  {
+    "name": "Matplotlib",
+    "type": "Library",
+    "context": "Academic",
+    "tags": ["Visualization"]
+  },
+  {
+    "name": "Seaborn",
+    "type": "Library",
+    "context": "Academic",
+    "tags": ["Visualization"]
+  },
+  {
+    "name": "TensorFlow",
+    "type": "Library",
+    "context": "Academic",
+    "tags": ["Deep Learning"]
+  },
+  {
+    "name": "Scikit-learn",
+    "type": "Library",
+    "context": "Academic",
+    "tags": ["Machine Learning"]
+  },
+  {
+    "name": "Flask",
+    "type": "Framework",
+    "context": "Academic",
+    "tags": ["Web App"]
+  },
+  {
+    "name": "Dash",
+    "type": "Framework",
+    "context": "Academic",
+    "tags": ["Dashboard"]
+  },
+  {
+    "name": "Plotly",
+    "type": "Library",
+    "context": "Academic",
+    "tags": ["Visualization"]
+  },
+
+
+
+
+  {
+    "name": "Python",
+    "type": "Language",
+    "context": "SJSU",
+    "tags": ["Data Science", "Machine Learning"]
+  },
+  {
+    "name": "C++",
+    "type": "Language",
+    "context": "Academic",
+    "tags": ["Systems", "Performance"]
+  },
+  {
+    "name": "SQL",
+    "type": "Language",
+    "context": "SJSU",
+    "tags": ["Database", "Queries"]
+  },
+  {
+    "name": "TensorFlow",
+    "type": "Library",
+    "context": "SJSU",
+    "tags": ["Deep Learning"]
+  },
+  {
+    "name": "Dash",
+    "type": "Framework",
+    "context": "SJSU",
+    "tags": ["Dashboard", "Web App"]
+  },
+  {
+    "name": "Data Collection",
+    "type": "Skill",
+    "context": "Industry",
+    "tags": ["Research Ops", "Meta"]
+  },
+  {
+    "name": "Data Quality Assurance",
+    "type": "Skill",
+    "context": "Industry",
+    "tags": ["QA", "Meta"]
+  },
+
+  
+  {
+    "name": "Team Leadership",
+    "type": "Soft Skill",
+    "context": "Military",
+    "tags": ["US Army"]
+  },
+  {
+    "name": "Operational Safety & Compliance",
+    "type": "Soft Skill",
+    "context": "Military",
+    "tags": ["US Army"]
+  },
+  {
+    "name": "Technical Equipment Troubleshooting",
+    "type": "Technical Skill",
+    "context": "Military",
+    "tags": ["US Army"]
+  },
+  {
+    "name": "High-Stress Problem Solving",
+    "type": "Soft Skill",
+    "context": "Military",
+    "tags": ["US Army"]
+  },
+  {
+    "name": "Logistics Coordination",
+    "type": "Soft Skill",
+    "context": "Military",
+    "tags": ["US Army"]
+  },
+  {
+    "name": "Sensitive Item Management",
+    "type": "Soft Skill",
+    "context": "Military",
+    "tags": ["US Army"]
+  }
+]
