@@ -198,6 +198,9 @@
           pill.textContent = item.text;
           badgesWrap.appendChild(pill);
         });
+      })
+      .catch(err => {
+        console.error('Failed to load status_badge.json', err);
       });
 
     // ------- Picture -------
@@ -300,6 +303,9 @@
 
           grid.appendChild(el);
         });
+      })
+      .catch(err => {
+        console.error('Failed to load projects.json', err);
       });
 
 
@@ -342,36 +348,51 @@
 
           expList.appendChild(li);
         });
+      })
+      .catch(err => {
+        console.error('Failed to load experience.json', err);
       });
 
 
-    // ------- Skills -------
-    const skills = [
-      // Programming Languages & Tools
-      'C', 'C++', 'Java', 'Python', 'SQL', 'R', 'Google App Engine', 'JMP',
-
-      // Libraries & Frameworks
-      'NumPy', 'Pandas', 'Matplotlib', 'Seaborn', 'TensorFlow', 'Scikit-learn',
-      'Flask', 'Dash', 'Plotly',
-
-      // Data Collection & Quality (Current @ Meta)
-      'Data Collection', 'Data Quality Assurance', 'Command Line', 'Research Operations',
-      'AR/VR Hardware', 'Prototype Testing', 'Device Troubleshooting',
-      'Bug Logging', 'Study Protocol Compliance', 'Metadata Validation',
-      'Confidential Data Handling', 'Equipment Tracking', 'QA Documentation',
-
-      // US Army
-      'Team Leadership', 'Operational Safety & Compliance',
-      'Technical Equipment Troubleshooting', 'High-Stress Problem Solving',
-      'Logistics Coordination', "Sensitive Item Management"
-    ];
+    // ------- Skills (from JSON with hover tags) -------
     const skillsList = document.getElementById('skillsList');
-    skills.forEach(s => {
-      const li = document.createElement('li');
-      li.className = 'px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800';
-      li.textContent = s;
-      skillsList.appendChild(li);
-    });
+
+    // optional: context background color
+    const contextBgClass = {
+      SJSU: 'bg-amber-400 dark:bg-amber-900/70',
+      Academic: 'bg-orange-500 dark:bg-orange-900/70',
+      Industry: 'bg-emerald-100 dark:bg-emerald-900/40',
+      Military: 'bg-green-600 dark:bg-green-900/40'
+    };
+
+    fetch('data/skills.json')
+      .then(r => r.json())
+      .then(skills => {
+        skills.forEach(s => {
+          const li = document.createElement('li');
+
+          // bg color
+          const bgClass = contextBgClass[s.context] || 'bg-slate-100 dark:bg-slate-800';
+
+          li.className =
+            'px-3 py-1 rounded-full text-sm ' +
+            bgClass;
+
+          li.textContent = s.name;
+
+          // simple hover：using tooltip
+          const tagsText = Array.isArray(s.tags) && s.tags.length > 0
+            ? ' · ' + s.tags.join(', ')
+            : '';
+
+          li.title = `${s.name} — ${s.type} · ${s.context}${tagsText}`;
+
+          skillsList.appendChild(li);
+        });
+      })
+      .catch(err => {
+        console.error('Failed to load skills.json', err);
+      });
 
     // ------- Education -------
     const eduList = document.getElementById('educationList');
@@ -407,6 +428,9 @@
 
           eduList.appendChild(block);
         });
+      })
+      .catch(err => {
+        console.error('Failed to load education.json', err);
       });
 
     // Dark/Light toggle
