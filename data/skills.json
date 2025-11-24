@@ -80,37 +80,37 @@
   {
     "name": "Java",
     "type": "Language",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Programming"]
   },
   {
     "name": "Python",
     "type": "Language",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Data Science", "ML"]
   },
   {
     "name": "SQL",
     "type": "Language",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Database", "Queries"]
   },
   {
     "name": "R",
     "type": "Language",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Statistics"]
   },
   {
     "name": "JMP",
     "type": "Tool",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Statistics"]
   },
   {
     "name": "Google App Engine",
     "type": "Tool",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Cloud"]
   },
 
@@ -118,103 +118,60 @@
   {
     "name": "NumPy",
     "type": "Library",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Data Science"]
   },
   {
     "name": "Pandas",
     "type": "Library",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Data Science"]
   },
   {
     "name": "Matplotlib",
     "type": "Library",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Visualization"]
   },
   {
     "name": "Seaborn",
     "type": "Library",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Visualization"]
   },
   {
     "name": "TensorFlow",
     "type": "Library",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Deep Learning"]
   },
   {
     "name": "Scikit-learn",
     "type": "Library",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Machine Learning"]
   },
   {
     "name": "Flask",
     "type": "Framework",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Web App"]
   },
   {
     "name": "Dash",
     "type": "Framework",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Dashboard"]
   },
   {
     "name": "Plotly",
     "type": "Library",
-    "context": "Academic",
+    "context": "SJSU",
     "tags": ["Visualization"]
   },
 
 
 
-
-  {
-    "name": "Python",
-    "type": "Language",
-    "context": "SJSU",
-    "tags": ["Data Science", "Machine Learning"]
-  },
-  {
-    "name": "C++",
-    "type": "Language",
-    "context": "Academic",
-    "tags": ["Systems", "Performance"]
-  },
-  {
-    "name": "SQL",
-    "type": "Language",
-    "context": "SJSU",
-    "tags": ["Database", "Queries"]
-  },
-  {
-    "name": "TensorFlow",
-    "type": "Library",
-    "context": "SJSU",
-    "tags": ["Deep Learning"]
-  },
-  {
-    "name": "Dash",
-    "type": "Framework",
-    "context": "SJSU",
-    "tags": ["Dashboard", "Web App"]
-  },
-  {
-    "name": "Data Collection",
-    "type": "Skill",
-    "context": "Industry",
-    "tags": ["Research Ops", "Meta"]
-  },
-  {
-    "name": "Data Quality Assurance",
-    "type": "Skill",
-    "context": "Industry",
-    "tags": ["QA", "Meta"]
-  },
 
   
   {
