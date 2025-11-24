@@ -1,0 +1,32 @@
+[
+      {
+        "role": "Data Collection Technician",
+        "org": "Experis @ Meta",
+        "dates": "Nov 2025 – Present",
+        "location": "Fremont, CA",
+        "summary": [
+          "Support XR research studies by guiding participants through study procedures and ensuring high data quality.",
+          "Collect and verify data in acccordance with strict research protocols while maintain participant confidentiality.",
+          "Troubleshoot prototype hardware and software issues on test devices, log bugs, and communicating blockers to the internal team.",
+          "Track equipment usage, perform test device checks, and maintain inventory to ensure operational readiness.",
+          "Collaborate with data quality analysts and engineers to provide feedback that improves data integrity and study workflows."
+        ]
+      },
+      {
+        "role": "Heavy Truck Operator (88M)",
+        "org": "U.S. Army",
+        "dates": "Nov 2015 – Mar 2019",
+        "location": "United States",
+        "summary": [
+          "Operated and maintained heavy-wheeled military transport vehicles supporting forward brigade operations. Safely transported personnel, ammunition, supplies, and critical equipment in diverse operational conditions.",
+          "Served as communications representative ensuring proper operation of radio and Joint Capabilities Release (JCR) systems.",
+          "Coordinated logistics, vehicle readiness, and mission execution within high-pressure environments."
+        ],
+        "achievements": [
+          "Army Commendation Medal (ARCOM)",
+          "Army Achievement Medal (3rd Award, AAM)",
+          "Army Good Conduct Medal (AGCM)",
+          "Driver & Mechanic Badge w/ Mechanic Clasp"
+        ]
+      }
+    ]
