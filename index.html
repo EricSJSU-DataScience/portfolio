@@ -385,7 +385,8 @@
             ? ' · ' + s.tags.join(', ')
             : '';
 
-          li.title = `${s.name} — ${s.type} · ${s.context}${tagsText}`;
+          // li.title = `${s.name} — ${s.type} · ${s.context}${tagsText}`;
+          li.title = `${s.context}${tagsText} · ${s.type}`;
 
           skillsList.appendChild(li);
         });
