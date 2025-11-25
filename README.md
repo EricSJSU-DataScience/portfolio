@@ -17,6 +17,7 @@ All major sections fetch data dynamically:
 - `projects.json`
 - `experience.json`
 - `education.json`
+- `skills.json`
 - `status_badge.json`
 
 This separates content from UI, making updates simple and clean.
@@ -130,10 +131,9 @@ Modify `/data/status_badge.json`.
 
 ### **Update Skills**
 
-Currently hard-coded inside index.html under:
-```const skills = [ ... ];```
+Modify `/data/skills.json`.
 
-After re-work skill section: Modify `/data/skills.json`.
+Still need better way to represent skills.
 
 
 
