@@ -1,4 +1,4 @@
-# Eric Zhao — Portfolio Website
+# Eric Zhao — Portfolio [Website](https://ericsjsu-datascience.github.io/portfolio/)
 
 A clean, responsive, JSON-driven portfolio website built using **HTML**, **TailwindCSS**, and **JavaScript**.  
 The site is deployed with **GitHub Pages** and designed to organize and present my projects, experience, skills, and education.
