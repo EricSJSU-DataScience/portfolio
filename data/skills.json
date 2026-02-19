@@ -12,10 +12,28 @@
     "tags": ["QA", "Meta"]
   },
   {
-    "name": "Command Line",
+    "name": "PowerShell",
     "type": "Tool",
     "context": "Industry",
-    "tags": ["Shell", "CLI"]
+    "tags": ["CLI", "Automation", "Windows"]
+  },
+  {
+    "name": "macOS Terminal",
+    "type": "Tool",
+    "context": "Industry",
+    "tags": ["CLI", "Unix"]
+  },
+  {
+    "name": "ADB (Android Debug Bridge)",
+    "type": "Tool",
+    "context": "Industry",
+    "tags": ["Device Debugging", "Firmware", "Diagnostics"]
+  },
+  {
+    "name": "Defect Reproduction & Root Cause Analysis",
+    "type": "Technical Skill",
+    "context": "Industry",
+    "tags": ["Debugging", "QA"]
   },
   {
     "name": "Research Operations",
@@ -209,5 +227,11 @@
     "type": "Soft Skill",
     "context": "Military",
     "tags": ["US Army"]
+  },
+  {
+    "name": "Secure Communications Systems Handling",
+    "type": "Technical Skill",
+    "context": "Military",
+    "tags": ["Radio", "JCR", "Security Clearance"]
   }
 ]
