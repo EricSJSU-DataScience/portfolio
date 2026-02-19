@@ -141,11 +141,11 @@ Still need better way to represent skills.
 
 ## 📬 Contact
 
-Email: vet.ericzhao@gmail.com
+[Email](vet.ericzhao@gmail.com)
 
-GitHub: https://github.com/EricSJSU-DataScience
+[GitHub](https://github.com/EricSJSU-DataScience)
 
-LinkedIn: https://www.linkedin.com/in/eric-zhao-data-scientist/
+[LinkedIn](https://www.linkedin.com/in/eric-zhao-data-scientist/)
 
 ---
 
