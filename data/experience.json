@@ -1,35 +1,47 @@
 [
-      {
-        "role": "Collection Operations Technician / Data Quality Analyst",
-        "org": "Experis @ Meta",
-        "dates": "2025 – Present",
-        "location": "Fremont, CA",
-        "summary": [
-          "Performed structured device testing and user workflow validation in XR research projet.",
-          "Performed device validation and firmware checks using PowerShell and macOS CLI tools; reproduced and isolated hardware–software defects, verified data integrity.",
-          "Document bugs with detailed reproduction steps, system conditions to support rapid resolution.",
-          "Collaboricate with cross-functional engineers to refine XR research protocol.",
-          "Ensured collected datasets met quality thresholds thru systematic QA review and protocol enforcement.",
-          "Maintain strict handling procedures for prototype hardware and sensitive research data."
-        ]
-      },
-      {
-        "role": "Squad Leader | Logistics & Communications Operations | Heavy Vehicle Operator (88M)",
-        "org": "U.S. Army",
-        "dates": "2015 – 2019",
-        "location": "United States",
-        "summary": [
-          "Served in Armed Brigade forward support company, Led two squads responsible for heavy equipment maintenance, supply-line transport, and convoy route planning in high-tempo environments.",
-          "Managed and safeguarded sensitive items (radio, JCR) requiring secret clearance and strict operational protocols. Maintained accountability of controlled equipment and encryption keys.",
-          "Operated and maintained heavy-wheeled military transport vehicles supporting forward brigade operations. Safely transported personnel, ammunition, supplies, and critical equipment in diverse operational conditions.",
-          "Served as communications representative ensuring proper operation of radio and Joint Capabilities Release (JCR) systems.",
-          "Coordinated logistics, vehicle readiness, and mission execution within high-pressure environments."
-        ],
-        "achievements": [
-          "Army Commendation Medal (ARCOM)",
-          "Army Achievement Medal (3rd Award, AAM)",
-          "Army Good Conduct Medal (AGCM)",
-          "Driver & Mechanic Badge w/ Mechanic Clasp"
-        ]
-      }
+  {
+    "role": "Robotics Systems & Data Operations Specialist",
+    "org": "RoboForce",
+    "dates": "Jun 2026 - Present",
+    "location": "Fremont, CA",
+    "summary": [
+      "Operated and calibrated robotic arms for precision physical AI data-collection tasks.",
+      "Diagnosed and resolved robotics control system faults to minimize downtime.",
+      "Collected, validated, and logged operational data to support model-training pipelines.",
+      "Set up and coordinated multi-operator sessions for consistent, high-quality data capture."
     ]
+  },
+  {
+    "role": "Collection Operations Technician / Data Quality Analyst",
+    "org": "Experis @ Meta",
+    "dates": "Nov 2025 – Jun 2026",
+    "location": "Fremont, CA",
+    "summary": [
+      "Performed structured device testing and user workflow validation in XR research projet.",
+      "Performed device validation and firmware checks using PowerShell and macOS CLI tools; reproduced and isolated hardware–software defects, verified data integrity.",
+      "Document bugs with detailed reproduction steps, system conditions to support rapid resolution.",
+      "Collaboricate with cross-functional engineers to refine XR research protocol.",
+      "Ensured collected datasets met quality thresholds thru systematic QA review and protocol enforcement.",
+      "Maintain strict handling procedures for prototype hardware and sensitive research data."
+    ]
+  },
+  {
+    "role": "Squad Leader | Logistics & Communications Operations | Heavy Vehicle Operator (88M)",
+    "org": "U.S. Army",
+    "dates": "Nov 2015 – Mar 2019",
+    "location": "United States",
+    "summary": [
+      "Served in Armed Brigade forward support company, Led two squads responsible for heavy equipment maintenance, supply-line transport, and convoy route planning in high-tempo environments.",
+      "Managed and safeguarded sensitive items (radio, JCR) requiring secret clearance and strict operational protocols. Maintained accountability of controlled equipment and encryption keys.",
+      "Operated and maintained heavy-wheeled military transport vehicles supporting forward brigade operations. Safely transported personnel, ammunition, supplies, and critical equipment in diverse operational conditions.",
+      "Served as communications representative ensuring proper operation of radio and Joint Capabilities Release (JCR) systems.",
+      "Coordinated logistics, vehicle readiness, and mission execution within high-pressure environments."
+    ],
+    "achievements": [
+      "Army Commendation Medal (ARCOM)",
+      "Army Achievement Medal (3rd Award, AAM)",
+      "Army Good Conduct Medal (AGCM)",
+      "Driver & Mechanic Badge w/ Mechanic Clasp"
+    ]
+  }
+]
