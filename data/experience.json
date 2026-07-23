@@ -1,14 +1,12 @@
 [
   {
-    "role": "Robotics Systems & Data Operations Specialist",
+    "role": "Data Collection Operator - AI Robotics",
     "org": "RoboForce",
     "dates": "Jun 2026 - Present",
-    "location": "Fremont, CA",
+    "location": "Milpitas, CA",
     "summary": [
-      "Operated and calibrated robotic arms for precision physical AI data-collection tasks.",
-      "Diagnosed and resolved robotics control system faults to minimize downtime.",
-      "Collected, validated, and logged operational data to support model-training pipelines.",
-      "Set up and coordinated multi-operator sessions for consistent, high-quality data capture."
+      "Supported the development of Physical AI by operating robotic systems and executing structured data collection workflows. ",
+      "Performed testing, monitored equipment performance, documented observations, and collaborated with engineering teams to generate high-quality datasets used to improve robotic capabilities in real-world environents."
     ]
   },
   {
